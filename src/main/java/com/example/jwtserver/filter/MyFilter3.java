@@ -25,7 +25,6 @@ public class MyFilter3 implements Filter {
             String headerAuth = req.getHeader("Authorization");
             System.out.println("headerAuth = " + headerAuth);
 
-            System.out.println("필터 1");
             if (headerAuth.equals("cos")){
                 filterChain.doFilter(req, res);
             } else {
